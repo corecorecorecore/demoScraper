@@ -1,5 +1,6 @@
 # demoScraper
 Python Proxy Scraper/Parser which will find EVERY single proxy on the site, unless blocked
+removes duplicates and will output Source response code to see if blocked or dead source
 
 ## Installation, Usage
 ```
