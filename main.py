@@ -14,8 +14,14 @@ def main():
     headers = Headers(headers=True).generate()
     with httpx.Client(http2=True,headers =headers) as client:
         for proxy in range(len(prox)):
-                    r = client.get(prox[proxy],headers=headers)
-                    print(prox[proxy],r)
+                    try:
+                        try:                    
+                            r = client.get(prox[proxy],headers=headers)
+                            print(prox[proxy],r)
+                        except httpx.HTTPError as exc:
+                            print(exc)
+                    except:
+                        pass
                     for line in pattern.findall(r.text):
                         f = open(file2, "a")
                         f.write(line+'\n')
