@@ -1,9 +1,13 @@
 # demoScraper
 Python Proxy Scraper/Parser which will find EVERY single proxy on the site, unless blocked
 
-## Installation
+## Installation, Usage
 ```
 pip install -r requirements.txt
+
+python main.py
+
+Sources in Source.txt, it will write to all.txt
 ```
 
 ## To-Do
