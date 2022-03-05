@@ -28,7 +28,11 @@ def main():
                         f.close()
         file = open(file2, "r")
         mylist = list(map(lambda x:x.strip(),open(file2)))
-        mylist = list(dict.fromkeys(mylist))
+        mylist = list(set(mylist))
+        result = "\n".join(mylist[0:])
+        f = open(file2, "w")
+        f.write(result)
+        f.close()
         line_count = 0
         for line in file:
             if line != "\n":
