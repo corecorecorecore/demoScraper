@@ -15,3 +15,4 @@ Sources in Source.txt, it will write to all.txt
 - [ ] make code more clean
 - [x] check for how many proxies scraped from each source and print out
 - [x] removing duplicates
+- [ ] fix an issue where it doesnt scrape anything from some working sources
