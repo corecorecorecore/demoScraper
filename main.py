@@ -6,9 +6,13 @@ proxfile = 'Source.txt'
 file2 = 'all.txt'
 prox = list(map(lambda x:x.strip(),open(proxfile)))
 pattern = re.compile(r"(\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}:\d{2,5})")
+count = 0
     
 def main():
-    os.remove(file2) 
+    if os.path.exists(file2):
+        os.remove(file2)
+    else:
+        pass
     os.system('cls' if os.name == 'nt' else 'clear')
     headers = Headers(headers=True).generate()
     with httpx.Client(http2=True,headers =headers) as client:
