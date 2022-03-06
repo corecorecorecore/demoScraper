@@ -13,5 +13,5 @@ Sources in Source.txt, it will write to all.txt
 
 ## To-Do
 - [ ] make code more clean
-- [ ] check for how many proxies scraped from each source and print out
+- [x] check for how many proxies scraped from each source and print out
 - [x] removing duplicates
