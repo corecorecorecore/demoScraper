@@ -19,7 +19,7 @@ def main():
                     try:
                         try:                    
                             r = client.get(prox[proxy],headers=headers)
-                            for line in pattern.findall(r.text):
+                            for line in pattern.findall(str(r.content)):
                                 f = open(file2, "a")
                                 f.write(line+'\n')
                                 f.close()
