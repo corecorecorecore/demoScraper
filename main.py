@@ -28,7 +28,16 @@ def main():
                                     line_count += 1
                             print(line_count, 'proxies gotten from source',prox[proxy],r)
                         except httpx.HTTPError as exc:
-                            print(exc)
+                            print(exc, prox[proxy])
+                            r = client.get(prox[proxy],headers=headers)
+                            for line in pattern.findall(r.text):
+                                f = open(file2, "a")
+                                f.write(line+'\n')
+                                f.close()
+                                file = open(file2, "r")
+                                if line != "\n":
+                                    line_count += 1
+                            print(line_count, 'proxies gotten from source',prox[proxy],r)
                     except:
                         pass
         file = open(file2, "r")
