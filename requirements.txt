@@ -1,2 +1,3 @@
-httpx
 fake_headers
+httpx
+httpx[h2]
