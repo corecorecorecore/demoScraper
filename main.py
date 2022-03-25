@@ -1,6 +1,5 @@
 import re, os, httpx
 from fake_useragent import UserAgent
-from alive_progress import alive_bar
 
 proxfile = 'Source.txt'
 file2 = 'all.txt'
