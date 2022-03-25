@@ -1,6 +1,6 @@
 import re, os, httpx
 from fake_useragent import UserAgent
-
+from alive_progress import alive_bar
 
 proxfile = 'Source.txt'
 file2 = 'all.txt'
@@ -56,3 +56,4 @@ def main():
                     
 if __name__ == '__main__':
     main()
+    input('Press Enter to quit')
